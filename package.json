@@ -1,0 +1,19 @@
+{
+  "name": "cmsc-100",
+  "version": "1.0.0",
+  "description": "sample-project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quinn704/cmsc-100.git"
+  },
+  "author": "Andric Quinn S. Baticos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quinn704/cmsc-100/issues"
+  },
+  "homepage": "https://github.com/quinn704/cmsc-100#readme"
+}
