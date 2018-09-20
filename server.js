@@ -54,6 +54,34 @@ app.get('/find-one-post', (request,response) =>{
 	});
 });
 
+// This route receives POST messages instead
+// Make sure body parser is in use otherwise the message body will be unreadable
+app.post('/find-one-post', (request, response)=>{
+	console.log(request.body);
+
+	Post.findOne({ title: request.body.title}, (error, post)=> {
+		if (post) {
+			response.send(post);
+		} else {
+			response.send('Nothing Found');
+		}
+	});
+});
+
+// This route receives POST messages and adds a subject to the DB
+app.post('/add-post', (request, response) => {
+	const newPost = new Post(request.body);
+	const title = request.body.title;
+
+	newPost.save((error)=> {
+		if (error) {
+			response.send('Error saving record');
+		} else {
+			response.send('Successfully saved ' + title);
+		}
+	})
+});
+
 app.listen(3000, ()=>{
 	console.log('Server started');
 })
