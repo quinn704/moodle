@@ -41,6 +41,19 @@ app.get('/find-all-posts', (request, response) => {
 	});
 });
 
+// This route makes use of parameters in the URL
+// Returns only one object. Note the use of findOne()
+// Like the root URL, you can test this endpoint using a browser
+app.get('/find-one-post', (request,response) =>{
+	Post.findOne( { title: request.query.title}, (error, post) => {
+		if (post && !error) {
+			response.send(post);
+		} else {
+			response.send('Nothing Found!');
+		}
+	});
+});
+
 app.listen(3000, ()=>{
 	console.log('Server started');
 })
