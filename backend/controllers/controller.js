@@ -31,7 +31,32 @@ exports.home = (req, res, next) => {
 
 }
 
+exports.saveTeacher = (req, res, next) => {
 
+  /********************************
+  *     VARIABLE DECLARATIONS     *
+  ********************************/
+  var name = req.body.name;
+  var password = req.body.password;
+  var email = req.body.email;
+
+  /******************************
+  *          FUNCTIONS          *
+  ******************************/
+	function start() {
+    if (typeof req.body==='undefined') {
+      return res.status(500).send("[ERROR 400] Cannot find message body.")
+    } else {
+      const teacher = new models.Teacher(req.body);
+      teacher.save((error) => {
+        if (error) { return res.status(500).send('Error saving teacher!'); }
+        else { return res.status(200).send('[SUCCESS 200] Successfully saved ' + name + ' into the database...'); }
+      })
+    }
+  }
+  start();
+
+}
 
 
 
