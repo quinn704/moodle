@@ -25,6 +25,9 @@ module.exports = (app) => {
   //	GET Methods
 	app.get('/', controller.home);
 
+  //  POST Methods
+  app.post('/add-teacher', controller.saveTeacher);
+  
 }
 
 
