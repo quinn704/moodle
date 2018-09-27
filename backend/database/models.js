@@ -22,10 +22,16 @@ const mongoose  = require('mongoose');
 
 //  -- User Schema
 var User = mongoose.model('User', new mongoose.Schema({
+  _id: ObjectID(...),
   name: 'string',
   password: 'string',
   email: 'string'
 }));
+
+//  -- Student Schema
+var Student = mongoose.model('Student', new mongoose.Schema({
+  host: ObjectID(...)
+}))
 
 
 
