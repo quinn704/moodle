@@ -52,7 +52,7 @@ var Class = mongoose.model('Class', new mongoose.Schema({
 var Post = mongoose.model('Post', new mongoose.Schema({
   postId: mongoose.Schema.Types.ObjectId,
   content: 'string',
-  timestamp : { type : Date, default: Date.now }
+  timestamp : { type : Date, default: Date.now },
   authorId: mongoose.Schema.Types.ObjectId,
   classId: mongoose.Schema.Types.ObjectId,
 }))
