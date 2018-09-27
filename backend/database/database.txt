@@ -1,0 +1,34 @@
+/**************************************************************************************************
+*                                                                                                 *
+*     Computer Science 100 Exercise: Moodle                                                       *
+*                                                                                                 *
+*     PURPOSE                                                                                     *
+*     This file contains the database queries to initialize the database.                         *
+*                                                                                                 *
+*     USAGE                                                                                       *
+*     Open your mongodb and run the following commands.                                           *
+*                                                                                                 *
+*     SUBROUTINES AND FUNCTION SUBPROGRAMS REQUIRED                                               *
+*     None                                                                                        *
+*                                                                                                 *
+*     PROGRAMMER                                                                                  *
+*     Andric Quinn Baticos                                                                        *
+*                                                                                                 *
+*     DATE-WRITTEN                                                                                *
+*     September 2018                                                                              *
+*                                                                                                 *
+**************************************************************************************************/
+
+/* RESET AND USE THE DATABASE */
+use moodle
+db.dropDatabase()
+use moodle
+
+/* CREATE THE COLLECTIONS */
+db.createCollection("class")
+db.createCollection("inbox")
+db.createCollection("message")
+db.createCollection("posts")
+db.createCollection("student")
+db.createCollection("teacher")
+db.createCollection("user")
