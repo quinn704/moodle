@@ -41,7 +41,7 @@ start = () => {
 
   router(app);
   return app.listen(port, () => {
-    console.log(`[SUCCESS] Server started. Listening on port ${port}`);
+    console.log(`[SUCCESS] Server started. Listening on port ${port}...`);
   });
 
 }
