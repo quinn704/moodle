@@ -72,7 +72,15 @@ const PostSchema = new mongoose.Schema({
   classId: ClassSchema
 }); var Post = mongoose.model('Post', PostSchema);
 
-
+module.exports = {
+  User,
+  Student,
+  Teacher,
+  Class,
+  Inbox,
+  Message,
+  Post
+}
 
 
 
