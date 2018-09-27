@@ -40,6 +40,14 @@ var Teacher = mongoose.model('Teacher', new mongoose.Schema({
   userId: mongoose.Schema.Types.ObjectId
 }))
 
+//  -- Class Schema
+var Class = mongoose.model('Class', new mongoose.Schema({
+  classId: mongoose.Schema.Types.ObjectId,
+  title: 'string',
+  section: 'string',
+  teacherId: mongoose.Schema.Types.ObjectId
+}))
+
 
 
 
