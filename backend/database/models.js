@@ -28,6 +28,21 @@ var Class = mongoose.model('Class', new mongoose.Schema({
   teacherId: mongoose.Schema.Types.ObjectId
 }))
 
+//  -- Inbox Schema
+var Inbox = mongoose.model('Inbox', new mongoose.Schema({
+  inboxId: mongoose.Schema.Types.ObjectId,
+  userId: mongoose.Schema.Types.ObjectId
+}))
+
+//  -- Message Schema
+var Message = mongoose.model('Message', new mongoose.Schema({
+  messageId: mongoose.Schema.Types.ObjectId,
+  timestamp : { type : Date, default: Date.now },
+  content: 'string',
+  senderId: mongoose.Schema.Types.ObjectId,
+  inboxId: mongoose.Schema.Types.ObjectId
+}))
+
 //  -- Post Schema
 var Post = mongoose.model('Post', new mongoose.Schema({
   postId: mongoose.Schema.Types.ObjectId,
