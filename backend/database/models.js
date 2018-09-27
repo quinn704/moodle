@@ -18,8 +18,14 @@
 *                                                                                                 *
 **************************************************************************************************/
 'use strict';
-const db = require(__dirname + "/../database/mongodb");
-const models = require(__dirname + "/../database/models");
+const mongoose  = require('mongoose');
+
+//  -- User Schema
+var User = mongoose.model('User', new mongoose.Schema({
+  name: 'string',
+  password: 'string',
+  email: 'string'
+}));
 
 
 
