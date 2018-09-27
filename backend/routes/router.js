@@ -22,6 +22,9 @@ const controller = require(__dirname + '/../controllers/controller');
 
 module.exports = (app) => {
 
+  //	GET Methods
+	app.get('/', controller.home);
+
 }
 
 

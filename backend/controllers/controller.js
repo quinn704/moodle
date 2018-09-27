@@ -21,6 +21,15 @@
 const db = require(__dirname + "/../database/mongodb");
 const models = require(__dirname + "/../database/models");
 
+exports.home = (req, res, next) => {
+
+	function start() {
+    return res.status(200).send("Exercise 06: Moodle (by Andric Quinn S. Baticos)");
+	}
+
+	start();
+
+}
 
 
 
