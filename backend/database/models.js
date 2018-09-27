@@ -33,6 +33,11 @@ var Student = mongoose.model('Student', new mongoose.Schema({
   host: mongoose.Schema.Types.ObjectId
 }))
 
+//  -- Teacher Schema
+var Teacher = mongoose.model('Teacher', new mongoose.Schema({
+  host: mongoose.Schema.Types.ObjectId
+}))
+
 
 
 
