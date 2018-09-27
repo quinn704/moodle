@@ -4,7 +4,8 @@
   "description": "A moodle-like app that lets users sign up as a student or teacher. Students and teachers interact with app in different ways.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/quinn704/moodle/issues"
   },
-  "homepage": "https://github.com/quinn704/moodle#readme"
+  "homepage": "https://github.com/quinn704/moodle#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.2.17"
+  }
 }
