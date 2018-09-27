@@ -22,7 +22,7 @@ const mongoose  = require('mongoose');
 
 //  -- User Schema
 var User = mongoose.model('User', new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
+  userId: mongoose.Schema.Types.ObjectId,
   name: 'string',
   password: 'string',
   email: 'string'
@@ -30,14 +30,15 @@ var User = mongoose.model('User', new mongoose.Schema({
 
 //  -- Student Schema
 var Student = mongoose.model('Student', new mongoose.Schema({
-  host: mongoose.Schema.Types.ObjectId
+  studentId: mongoose.Schema.Types.ObjectId,
+  userId: mongoose.Schema.Types.ObjectId
 }))
 
 //  -- Teacher Schema
 var Teacher = mongoose.model('Teacher', new mongoose.Schema({
-  host: mongoose.Schema.Types.ObjectId
+  teacherId: mongoose.Schema.Types.ObjectId,
+  userId: mongoose.Schema.Types.ObjectId
 }))
-
 
 
 
