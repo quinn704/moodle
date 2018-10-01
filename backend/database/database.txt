@@ -26,9 +26,6 @@ use moodle
 
 /* CREATE THE COLLECTIONS */
 db.createCollection("class")
-db.createCollection("inbox")
 db.createCollection("message")
-db.createCollection("posts")
-db.createCollection("student")
-db.createCollection("teacher")
+db.createCollection("post")
 db.createCollection("user")
