@@ -26,8 +26,9 @@ module.exports = (app) => {
 	app.get('/', controller.home);
 
   //  POST Methods
+	app.post('/add-student', controller.saveStudent);
   app.post('/add-teacher', controller.saveTeacher);
-  
+	
 }
 
 
